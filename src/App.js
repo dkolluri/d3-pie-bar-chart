@@ -1,25 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DonutChart from './DonutChart';
+import BarChart from './BarChart';
 
 function App() {
+
+  const DonutChartData = [{country:'Netherlands',value: 20},
+  {country:'Belgium',value: 5},
+  {country:'UK',value: 7},
+  {country:'Austria',value: 13},
+  {country:'Australia',value: 26},
+  {country:'Germany',value: 4},
+  {country:'Ireland',value: 25}];
+
+
+  const barChartData = [10,20,12,66,30];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+    <BarChart data={barChartData}/>
+    <DonutChart data={DonutChartData}/>
+    </React.Fragment>
+
   );
 }
 
