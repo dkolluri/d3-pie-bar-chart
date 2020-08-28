@@ -11,7 +11,7 @@ const DonutChart = props => {
     .arc()
     .innerRadius(0)
     .outerRadius(100);
-  const colors = d3.scaleOrdinal(d3.schemeCategory10);
+  const colors = d3.scaleOrdinal(d3.schemeAccent);
   const format = d3.format(".2f");
 
   useEffect(
